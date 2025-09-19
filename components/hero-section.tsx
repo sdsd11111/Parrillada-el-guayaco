@@ -37,7 +37,7 @@ export function HeroSection() {
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-4 animate-glow"
             onClick={() => window.open("https://wa.me/593984347001?text=Hola, quiero hacer una reserva", "_blank")}
           >
-            Contáctanos por WhatsApp para tu reserva
+            ¡Reserva Aqui!
           </Button>
         </div>
 

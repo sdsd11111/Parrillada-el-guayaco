@@ -100,18 +100,18 @@ export default function Hamburguesas() {
 					<h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
 						Galería de Creaciones
 					</h2>
-					<div className="flex justify-center flex-wrap gap-4">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
 						{hamburguesas.map((hamburguesa, index) => (
 							<div
 								key={index}
-								className="bg-card border border-border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 w-[300px]"
+								className="bg-card border border-border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
 							>
 								<Image
 									src={hamburguesa.image}
 									alt={hamburguesa.name}
-									width={300}
+									width={400}
 									height={300}
-									className="w-full h-full object-cover"
+									className="w-full h-48 object-cover"
 								/>
 								<div className="p-4">
 									<h3 className="text-xl font-bold mb-2 text-center">

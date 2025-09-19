@@ -83,35 +83,33 @@ export default function Bebidas() {
 			<section id="bebidas" className="py-20">
 				<div className="container mx-auto px-4">
 					<h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Bebidas</h2>
-					<div className="flex justify-center flex-wrap gap-4">
-						{bebidas.map((categoria, index) => (
-							<div key={index} className="mb-12">
-								<h3 className="text-2xl font-bold mb-6 text-center">{categoria.category}</h3>
-								<div className="flex justify-center flex-wrap gap-4">
-									{categoria.items.map((item, itemIndex) => (
-										<div
-											key={itemIndex}
-											className="bg-card border border-border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 w-[300px]"
-										>
-											<Image
-												src={item.image}
-												alt={item.name}
-												width={300}
-												height={300}
-												className="w-full h-full object-cover"
-											/>
-											<div className="p-4">
-												<h4 className="text-lg font-bold mb-2 text-center">{item.name}</h4>
-												<span className="text-md font-semibold text-primary">
-													{item.price}
-												</span>
-											</div>
+					{bebidas.map((categoria, index) => (
+						<div key={index} className="mb-12">
+							<h3 className="text-2xl font-bold mb-6">{categoria.category}</h3>
+							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+								{categoria.items.map((item, itemIndex) => (
+									<div
+										key={itemIndex}
+										className="bg-card border border-border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+									>
+										<Image
+											src={item.image}
+											alt={item.name}
+											width={400}
+											height={300}
+											className="w-full h-48 object-cover"
+										/>
+										<div className="p-4">
+											<h4 className="text-lg font-bold mb-2">{item.name}</h4>
+											<span className="text-md font-semibold text-primary">
+												{item.price}
+											</span>
 										</div>
-									))}
-								</div>
+									</div>
+								))}
 							</div>
-						))}
-					</div>
+						</div>
+					))}
 				</div>
 			</section>
 
